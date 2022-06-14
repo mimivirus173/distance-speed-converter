@@ -26,7 +26,7 @@ namespace speeddistToTime
             while (true)
             {
                 // Prompts the user for velocity
-                Console.Write("Input a velocity in km/s: ", Console.ForegroundColor = ConsoleColor.White);
+                Console.Write("Input a velocity in m/s: ", Console.ForegroundColor = ConsoleColor.White);
                 string inputSpeed = Console.ReadLine();
 
                 // Check for valid input
@@ -42,7 +42,7 @@ namespace speeddistToTime
                                 Console.WriteLine("Calculating time...");
                                 
                                 // Calculate time
-                                float result = dist / speed;
+                                float result = dist / (speed/1000);
                                 TimeSpan t = TimeSpan.FromSeconds( result );
                                 string answer = string.Format("{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms", 
                                 t.Hours, 
@@ -60,7 +60,6 @@ namespace speeddistToTime
                         } else {
                             Console.WriteLine("Invalid input!", Console.ForegroundColor = ConsoleColor.Red);
                         }
-                        
                     } else {
                         Console.WriteLine("Invalid input!", Console.ForegroundColor = ConsoleColor.Red);
                     }
