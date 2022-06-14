@@ -9,7 +9,7 @@ namespace secondsConverter
             // Terminal editing
             Console.Title = "Seconds Converter";
 
-            // Main
+            // Loops the program
             while (true)
             {
                 ConvertSeconds();
@@ -35,13 +35,13 @@ namespace secondsConverter
 
                         // Converts the seconds
                         TimeSpan t = TimeSpan.FromSeconds( seconds );
-
                         string answer = string.Format("{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms", 
                             t.Hours, 
                             t.Minutes, 
                             t.Seconds, 
                             t.Milliseconds);
                         
+                        // Prints output
                         Console.WriteLine(answer, Console.ForegroundColor = ConsoleColor.Green);
                         Console.WriteLine("------------------", Console.ForegroundColor = ConsoleColor.White);
                         
