@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HAP\\OneDrive - Skulin.fo (Nam)\\Dokumenter\\GitHub\\seconds-converter\\seconds-converter.csproj",
-      "projectName": "seconds-converter",
-      "projectPath": "C:\\Users\\HAP\\OneDrive - Skulin.fo (Nam)\\Dokumenter\\GitHub\\seconds-converter\\seconds-converter.csproj",
+      "projectUniqueName": "C:\\Users\\HAP\\OneDrive - Skulin.fo (Nam)\\Dokumenter\\GitHub\\distance-speed-converter\\distance-speed-converter.csproj",
+      "projectName": "distance-speed-converter",
+      "projectPath": "C:\\Users\\HAP\\OneDrive - Skulin.fo (Nam)\\Dokumenter\\GitHub\\distance-speed-converter\\distance-speed-converter.csproj",
       "packagesPath": "C:\\Users\\HAP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HAP\\OneDrive - Skulin.fo (Nam)\\Dokumenter\\GitHub\\seconds-converter\\obj\\",
+      "outputPath": "C:\\Users\\HAP\\OneDrive - Skulin.fo (Nam)\\Dokumenter\\GitHub\\distance-speed-converter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HAP\\AppData\\Roaming\\NuGet\\NuGet.Config"
