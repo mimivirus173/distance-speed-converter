@@ -1,49 +1,65 @@
 ﻿using System;
 
-namespace secondsConverter
+namespace speeddistToTime
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
             // Terminal editing
-            Console.Title = "Seconds Converter";
+            Console.Title = "Speed and Distance to Time converter";
 
             // Loops the program
             while (true)
             {
-                ConvertSeconds();
+                Convert();
             }
         }
 
-        public static void ConvertSeconds()
+        public static void Convert()
         {
             // Variables
-            float seconds;
+            float speed;
+            float dist;
             
             // Program
             while (true)
             {
-                // Prompts the user
-                Console.Write("Input an amount of seconds: ", Console.ForegroundColor = ConsoleColor.White);
-                string input = Console.ReadLine();
+                // Prompts the user for velocity
+                Console.Write("Input a velocity in km/s: ", Console.ForegroundColor = ConsoleColor.White);
+                string inputSpeed = Console.ReadLine();
 
                 // Check for valid input
-                if (float.TryParse(input, out seconds)) {
-                    if (seconds > 0) {
-                        Console.WriteLine("Converting to minutes and hours...");
+                if (float.TryParse(inputSpeed, out speed)) {
+                    if (speed > 0) {
+                        // Prompts the user for distance
+                        Console.Write("Input a distance in km: ");
+                        string inputDist = Console.ReadLine();
 
-                        // Converts the seconds
-                        TimeSpan t = TimeSpan.FromSeconds( seconds );
-                        string answer = string.Format("{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms", 
-                            t.Hours, 
-                            t.Minutes, 
-                            t.Seconds, 
-                            t.Milliseconds);
-                        
-                        // Prints output
-                        Console.WriteLine(answer, Console.ForegroundColor = ConsoleColor.Green);
-                        Console.WriteLine("------------------", Console.ForegroundColor = ConsoleColor.White);
+                        // Check for valid input
+                        if (float.TryParse(inputDist, out dist)) {
+                            if (dist > 0) {
+                                Console.WriteLine("Calculating time...");
+                                
+                                // Calculate time
+                                float result = dist / speed;
+                                TimeSpan t = TimeSpan.FromSeconds( result );
+                                string answer = string.Format("{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms", 
+                                t.Hours, 
+                                t.Minutes, 
+                                t.Seconds, 
+                                t.Milliseconds);
+
+                                // Print result
+                                Console.Write("Time to cross the given distance: ");
+                                Console.Write(" " + answer, Console.ForegroundColor = ConsoleColor.Green);
+                                Console.WriteLine("\n------------------", Console.ForegroundColor = ConsoleColor.White);
+                            } else {
+                                Console.WriteLine("Invalid input!", Console.ForegroundColor = ConsoleColor.Red);
+                            }
+                        } else {
+                            Console.WriteLine("Invalid input!", Console.ForegroundColor = ConsoleColor.Red);
+                        }
                         
                     } else {
                         Console.WriteLine("Invalid input!", Console.ForegroundColor = ConsoleColor.Red);

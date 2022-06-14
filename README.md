@@ -1,6 +1,4 @@
-# seconds-converter
- converts seconds to hours, minutes, seconds and milliseconds
- 
- wanted to make the convesion using division and stuff but i found a function that eliminates all that work
- 
- kinda dissapointed because of that lol
+# distance-speed-converter
+ takes a velocity in km/s and a distance in km and calculates the time it takes to cross that distance
+
+will try to update this with other measurements
