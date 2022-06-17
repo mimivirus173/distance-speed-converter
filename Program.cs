@@ -51,7 +51,7 @@ namespace speeddistToTime
                                 t.Milliseconds);
 
                                 // Print result
-                                Console.Write("Time to cross the given distance: ");
+                                Console.Write("Time to cross the given distance:");
                                 Console.Write(" " + answer, Console.ForegroundColor = ConsoleColor.Green);
                                 Console.WriteLine("\n------------------", Console.ForegroundColor = ConsoleColor.White);
                             } else {
