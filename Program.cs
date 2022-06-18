@@ -18,6 +18,10 @@ namespace speeddistToTime
 
         public static void Convert()
         {
+            // Arrays
+            string[] distMeasurements = {"km", "m"};
+            string[] speedMeasurements = {"km/s", "km/h", "m/s"};
+            
             // Variables
             float speed;
             float dist;
